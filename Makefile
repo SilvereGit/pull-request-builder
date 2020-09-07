@@ -1,7 +1,7 @@
 .PHONY: ci-cd patch hook lambda
 
 STACK         ?= ci-cd-v2
-ARTIFACT      ?= 
+ARTIFACT      ?=
 GITHUB_TOKEN  ?=
 
 GITHUB_REPO   ?=
@@ -54,7 +54,7 @@ patch:
 		--capabilities CAPABILITY_IAM \
 		--capabilities CAPABILITY_NAMED_IAM && \
 	aws cloudformation wait stack-update-complete \
-		--stack-name ${STACK}	
+		--stack-name ${STACK}
 
 hook:
 	@echo "==> install hook to ${GITHUB_REPO} using toolkit ${CODE_BUILD_TK}" ;\
@@ -74,4 +74,3 @@ hook:
 		--capabilities CAPABILITY_NAMED_IAM && \
 	aws cloudformation wait stack-create-complete \
 		--stack-name ${AWS_CODE_BUILD}
-
