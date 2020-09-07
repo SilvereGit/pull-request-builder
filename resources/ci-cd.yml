@@ -140,6 +140,11 @@ Resources:
                   - "athena:*"
 
                   - "application-autoscaling:DescribeScalableTargets"
+                  - "application-autoscaling:RegisterScalableTarget"
+                  - "application-autoscaling:DeregisterScalableTarget"
+                  - "application-autoscaling:DescribeScalingPolicies"
+                  - "application-autoscaling:PutScalingPolicy"
+                  - "application-autoscaling:DeleteScalingPolicy"
                 Resource:
                   - "*"
 
@@ -155,7 +160,7 @@ Resources:
       Environment:
         Variables:
           GITHUB_TOKEN: !Sub ${GithubToken}
-      Runtime: nodejs8.10
+      Runtime: nodejs12.x
       MemorySize: 1024
       Timeout: 30
 
