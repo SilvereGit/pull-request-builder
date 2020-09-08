@@ -140,9 +140,10 @@ Resources:
                   - "athena:*"
 
                   - "application-autoscaling:DescribeScalableTargets"
+                  - "application-autoscaling:DescribeScheduledActions"
+                  - "application-autoscaling:DescribeScalingPolicies"
                   - "application-autoscaling:RegisterScalableTarget"
                   - "application-autoscaling:DeregisterScalableTarget"
-                  - "application-autoscaling:DescribeScalingPolicies"
                   - "application-autoscaling:PutScalingPolicy"
                   - "application-autoscaling:DeleteScalingPolicy"
                 Resource:
