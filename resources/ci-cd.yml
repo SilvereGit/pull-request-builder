@@ -146,6 +146,21 @@ Resources:
                   - "application-autoscaling:DeregisterScalableTarget"
                   - "application-autoscaling:PutScalingPolicy"
                   - "application-autoscaling:DeleteScalingPolicy"
+
+                  - "ec2:CreateSecurityGroup"
+                  - "ec2:DeleteSecurityGroup"
+                  - "ec2:AuthorizeSecurityGroupEgress"
+                  - "ec2:AuthorizeSecurityGroupIngress"
+                  - "ec2:RevokeSecurityGroupEgress"
+                  - "ec2:RevokeSecurityGroupIngress"
+                  - "ec2:createTags"
+                  - "ec2:deleteTags"
+                  - "rds:CreateDBInstance"
+                  - "rds:DeleteDBInstance"
+                  - "rds:DescribeDBInstances"
+                  - "rds:DescribeDBSubnetGroups"
+                  - "rds:CreateDBSubnetGroup"
+                  - "rds:DeleteDBSubnetGroup"
                 Resource:
                   - "*"
 
